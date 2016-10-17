@@ -1,5 +1,7 @@
 source 'https://rubygems.org'
 
+#adding device
+gem 'devise'
 # specify ruby version
 ruby '2.3.1'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
