@@ -1,0 +1,10 @@
+<h1>Pages#welcome</h1>
+<p>Find me in app/views/pages/welcome.html.erb</p>
+
+<% if params["option"]=="a" %>
+<%= link_to "List of Hospitals", hospitals_path %>
+
+<% if params["option"]=="b" %>
+<%= link_to "List of Hospitals", hospitals_path %>
+
+<% end %>
