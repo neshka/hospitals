@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :doctors
   get 'pages/welcome'
 
   resources :hospitals
