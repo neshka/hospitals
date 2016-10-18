@@ -1,9 +1,35 @@
-<h1>Pages#welcome</h1>
-<p>Find me in app/views/pages/welcome.html.erb</p>
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<title>Hospitals</title>
+
+</head>
+
+<body>
+ <h1>Welcome</h1>
+
+ <h3>This is the place. Here you will find the answers.</h3>
+
+ <p>Share information about your patients, analyze the data for writing papers about different diseases. All that in one place. It will help doctors and researchers to share data about what they see in their hospitals.</p>
+
+
+</body>
+
+
+</html>
+
+
 
 <% if params["option"]=="a" %>
 <%= link_to "List of Hospitals", hospitals_path %>
 
 <% end %>
+
+
+
+
 
 
