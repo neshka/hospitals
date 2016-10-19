@@ -11,13 +11,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161019181957) do
+ActiveRecord::Schema.define(version: 20161019183708) do
 
   create_table "departments", force: :cascade do |t|
     t.string   "department_name", limit: 255
     t.datetime "created_at",                  null: false
     t.datetime "updated_at",                  null: false
+    t.integer  "hospital_id",     limit: 4
   end
+
+  add_index "departments", ["hospital_id"], name: "index_departments_on_hospital_id", using: :btree
 
   create_table "doctors", force: :cascade do |t|
     t.string   "first_name",    limit: 255
@@ -56,4 +59,5 @@ ActiveRecord::Schema.define(version: 20161019181957) do
   add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
   add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
 
+  add_foreign_key "departments", "hospitals"
 end
